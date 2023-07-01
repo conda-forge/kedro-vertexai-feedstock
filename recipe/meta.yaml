@@ -1,5 +1,5 @@
 {% set name = "kedro-vertexai" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kedro_vertexai-{{ version }}.tar.gz
-  sha256: 389cc388c3172b80aad214094d8c8d9b4ae2d2a285789b5e0c9a3b2e5b6ac768
+  sha256: 2686c1bf66d5d461fa465f5c76145849cb355954b5d8c01274d8e6bbbfe2f7cc
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.7,<3.11
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.8,<3.11
+    - python >=3.7,<3.11
     - kedro >=0.18.1,<0.19.0
     - click >=8.0.4
     - kfp >=1.8.12,<2.0
