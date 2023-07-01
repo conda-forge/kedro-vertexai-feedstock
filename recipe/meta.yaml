@@ -1,13 +1,13 @@
 {% set name = "kedro-vertexai" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kedro-vertexai-{{ version }}.tar.gz
-  sha256: af5aa700864d98f47f374d30aa79fdbbb3d436ffa612d0879e736f0a4a25bc13
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kedro_vertexai-{{ version }}.tar.gz
+  sha256: 389cc388c3172b80aad214094d8c8d9b4ae2d2a285789b5e0c9a3b2e5b6ac768
 
 build:
   noarch: python
@@ -43,6 +43,8 @@ requirements:
 test:
   imports:
     - kedro_vertexai
+  commands:
+    - pip check
   requires:
     - pip
 
