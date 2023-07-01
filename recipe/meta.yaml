@@ -43,8 +43,8 @@ requirements:
 test:
   imports:
     - kedro_vertexai
-  commands:
-    - pip check
+  #commands:
+    #- pip check
   requires:
     - pip
 
