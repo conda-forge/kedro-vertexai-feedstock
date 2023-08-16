@@ -21,23 +21,29 @@ requirements:
     - pip
   run:
     - python >=3.7,<3.11
-    - kedro >=0.18.8,<0.19.0
+    - kedro >=0.18.12,<0.19.0
     - click >=8.0.4
     - kfp >=1.4.0,<2.0
-    - kfp-server-api >=1.4.0,<2.0
+    #- kfp-server-api >=1.4.0,<2.0 # Packages found in the meta.yaml but not found by source code inspection:
     - tabulate >=0.8.7
-    - semver >=2.10.0,<4.0.0
+    - semver >=2.10.0,<4.0.0 # Packages found in the meta.yaml but not found by source code inspection:
     - pydantic >=1.9.0,<2.0.0
-    - google-auth <3.0.0
-    - google-cloud-scheduler >=2.3.2,<3.0.0
-    - google-cloud-iam <3.0.0
-    - gcsfs >=2022.1
+    - google-auth <3.0.0 # Packages found in the meta.yaml but not found by source code inspection:
+    - google-cloud-scheduler >=2.3.2 # Packages found in the meta.yaml but not found by source code inspection:
+    - google-cloud-iam <3.0.0 # Packages found in the meta.yaml but not found by source code inspection:
+    - gcsfs >=2022.1 # Packages found in the meta.yaml but not found by source code inspection:
     - fsspec >=2022.1
-    - google-cloud-storage <3.0.0
-    - grpcio >=1.4.0,<2.0.0
-    - grpcio-status >=1.4.0,<2.0.0
-    - protobuf >=3.18.0,<21.0
+    - google-cloud-storage <3.0.0 # Packages found in the meta.yaml but not found by source code inspection:
+    - grpcio >=1.4.0,<2.0.0 # Packages found in the meta.yaml but not found by source code inspection:
+    - grpcio-status >=1.4.0,<2.0.0 # Packages found in the meta.yaml but not found by source code inspection:
+    - protobuf >=3.18.0,<21.0 # Packages found in the meta.yaml but not found by source code inspection:
     - cachetools >=3.0,<6.0
+# Packages found by source code inspection but not in the meta.yaml:
+    #- cloudpickle
+    #- pluggy
+    #- requests
+    #- omegaconf
+    #- pyyaml
   run_constrained:
     - kedro-mlflow >=0.11.8,<0.12.0
 
@@ -45,7 +51,7 @@ test:
   imports:
     - kedro_vertexai
   #commands:
-    #- pip check
+    - pip check
   requires:
     - pip
 
