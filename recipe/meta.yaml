@@ -50,7 +50,7 @@ requirements:
 test:
   imports:
     - kedro_vertexai
-  #commands:
+  commands:
     - pip check
   requires:
     - pip
