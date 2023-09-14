@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -25,7 +25,7 @@ requirements:
     - click >=8.0.4
     - kfp >=1.4.0,<2.0
     - kfp-server-api >=1.4.0,<2.0 # Packages found in the meta.yaml but not found by source code inspection:
-    - kfp-pipeline-spec
+    #- kfp-pipeline-spec #Not in requirements https://github.com/getindata/kedro-vertexai/blob/develop/pyproject.toml#L34
     - tabulate >=0.8.7
     - semver >=2.10,<4.0.0 # Packages found in the meta.yaml but not found by source code inspection:
     - pydantic >=1.9.0,<2.0.0
