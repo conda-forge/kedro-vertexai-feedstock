@@ -28,6 +28,8 @@ requirements:
     #- kfp-pipeline-spec #Not in requirements https://github.com/getindata/kedro-vertexai/blob/develop/pyproject.toml#L34
     - tabulate >=0.8.7
     - semver >=2.10,<4.0.0 # Packages found in the meta.yaml but not found by source code inspection:
+    - toposort >1.0,<2.0
+    - pyarrow >=14.0.1
     - pydantic >=1.9.0,<2.0.0
     - google-auth <3 # Packages found in the meta.yaml but not found by source code inspection:
     - google-cloud-scheduler >=2.3.2 # Packages found in the meta.yaml but not found by source code inspection:
