@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 3
 
 requirements:
@@ -39,7 +39,7 @@ requirements:
     - grpcio-status >=1.4.0,<2.0.0 # Packages found in the meta.yaml but not found by source code inspection:
     - protobuf >=3.9.0,<21.0 # Packages found in the meta.yaml but not found by source code inspection:
     - cachetools >=3.0,<6.0
-# Packages found by source code inspection but not in the meta.yaml:
+    # Packages found by source code inspection but not in the meta.yaml:
     #- cloudpickle
     #- pluggy
     #- requests
