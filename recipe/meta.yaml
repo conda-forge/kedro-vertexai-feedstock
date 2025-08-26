@@ -1,5 +1,5 @@
 {% set name = "kedro-vertexai" %}
-{% set version = "0.12.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kedro_vertexai-{{ version }}.tar.gz
-  sha256: 7eecf261168429a1cd1ba84e885f6974af5283013799ef020e447d29397aa962
+  sha256: dab038533b84579617edaa1e1440a272e360e073db7aeffb8683fad3b0dea37b
 
 build:
   noarch: python
